@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: product-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000
+  datasource:
+    password: postgres
+    username: postgres
+    url: jdbc:postgresql://localhost:5400/product_db
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+server:
+  port: 8082

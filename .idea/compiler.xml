@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="C:/Program Files/jdk-21.0.9/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.42/8365263844ebb62398e0dc33057ba10ba472d3b8/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="product-service.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="account-service" target="21" />
+      <module name="account-service.main" target="21" />
+      <module name="account-service.test" target="21" />
+      <module name="auth-service" target="21" />
+      <module name="eureka-service" target="21" />
+      <module name="oders-service" target="21" />
+      <module name="products-service" target="21" />
+      <module name="spring-auth-server" target="21" />
+      <module name="spring-auth-server.main" target="21" />
+      <module name="spring-auth-server.test" target="21" />
+      <module name="user-service" target="21" />
+      <module name="users-service" target="21" />
+      <module name="users-service.main" target="21" />
+      <module name="users-service.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="account-service" options="-parameters" />
+      <module name="account-service.main" options="-parameters" />
+      <module name="account-service.test" options="-parameters" />
+      <module name="auth-service" options="-parameters" />
+      <module name="authserver" options="-parameters" />
+      <module name="authserver.main" options="-parameters" />
+      <module name="authserver.test" options="-parameters" />
+      <module name="eureka-service" options="-parameters" />
+      <module name="eurekaserver" options="-parameters" />
+      <module name="eurekaserver.main" options="-parameters" />
+      <module name="eurekaserver.test" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="gateway.main" options="-parameters" />
+      <module name="gateway.test" options="-parameters" />
+      <module name="oders-service" options="-parameters" />
+      <module name="order-service" options="-parameters" />
+      <module name="order-service.main" options="-parameters" />
+      <module name="order-service.test" options="-parameters" />
+      <module name="product-service" options="-parameters" />
+      <module name="product-service.main" options="-parameters" />
+      <module name="product-service.test" options="-parameters" />
+      <module name="products-service" options="-parameters" />
+      <module name="spring-auth-server" options="-parameters" />
+      <module name="spring-auth-server.main" options="-parameters" />
+      <module name="spring-auth-server.test" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="users-service" options="-parameters" />
+      <module name="users-service.main" options="-parameters" />
+      <module name="users-service.test" options="-parameters" />
+    </option>
+  </component>
+</project>
