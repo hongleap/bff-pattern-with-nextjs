@@ -3,36 +3,24 @@ server:
 spring:
   application:
     name: gateway
-#  cloud:
-#    gateway:
-#      server:
-#        webflux:
-#          routes:
-#            - id: order-service
-#              uri: lb://orders-service:8081
-#              predicates:
-#                - Path=/orders/**
-#            - id: product-service
-#              uri: lb://products-service:8082
-#              predicates:
-#                - Path
-#          default-filters:
-#            - TokenRelay=
   security:
     oauth2:
       client:
         registration:
-          user-accounts-app-oidc:
-            provider: spring
-            client-id: user-accounts-app
+          auth:
+            provider: auth-server
+            client-id: gateway
             client-secret: secret
             authorization-grant-type: authorization_code
-            redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/{registrationId}"
-            scope: openid, profile, accounts.read
-            client-name: user-accounts-app-oidc
-    provider:
-      spring:
-        issuer-uri: http://localhost:9000
-  resourceserver:
-    jwt:
-      issuer-uri: http://localhost:9000/oauth2/jwks
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - openid
+        provider:
+          auth-server:
+            authorization-uri: http://localhost:9000/oauth2/authorize
+            token-uri: http://localhost:9000/oauth2/token
+            user-name-attribute: sub
+
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000/jwks

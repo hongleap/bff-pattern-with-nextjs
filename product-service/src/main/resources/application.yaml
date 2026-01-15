@@ -9,7 +9,8 @@ spring:
   datasource:
     password: postgres
     username: postgres
-    url: jdbc:postgresql://localhost:5400/product_db
+    url: jdbc:postgresql://localhost:5168/products_db
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
