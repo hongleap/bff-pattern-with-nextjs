@@ -23,6 +23,12 @@ public class GatewayConfig {
                 .route("auth",r -> r.path("/oauth2/**")
                         .uri("http://localhost:9000")
                 )
+                .route("next", r-> r
+                        .path("/")
+                        .uri("http://localhost:3000")
+                )
+                .route("next_module", r->r.path("/_next/**").uri("http://localhost:3000")
+                )
                 .build();
 
     }

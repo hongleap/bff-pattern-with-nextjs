@@ -15,7 +15,7 @@ public class SecurityConfig {
         http
                 .authorizeExchange(exchanges -> exchanges
                         .pathMatchers("oauth2/**").permitAll()
-                        .anyExchange().hasAnyRole("ADMIN")
+                        .anyExchange().permitAll()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
                         .jwt(Customizer.withDefaults())

@@ -9,14 +9,21 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-logging:
-  level:
-    org.springframework.security: debug
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://localhost:9000
+
 server:
   port: 9000
   servlet:
     session:
       tracking-modes: cookie
+
+logging.level.org.springframework.security: DEBUG
+logging.level.org.springframework.security.oauth2.server.authorization: TRACE
+logging.level.org.springframework.security.oauth2.server.authorization.oidc.authentication: TRACE
+
 eureka:
   instance:
     prefer-ip-address: true
